@@ -1,6 +1,7 @@
 package pl.dawydiuk.CarsdawRepairs.domain;
 
 import lombok.Builder;
+import lombok.Getter;
 import pl.dawydiuk.CarsdawRepairs.dto.CarRepairDto;
 
 import javax.persistence.Entity;
@@ -9,6 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 @Builder
+@Getter
 class CarRepair {
 
     @Id
