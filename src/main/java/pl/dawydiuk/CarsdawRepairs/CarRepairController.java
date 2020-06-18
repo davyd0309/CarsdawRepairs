@@ -22,7 +22,7 @@ public class CarRepairController {
     public String getAllCarRepairs() {
         log.info("Send RQ for all repairs");
         return "{" +
-                "MY ALL REPAIRS" +
+                "MY ALL REPAIRS - HELLO" +
                 "}";
     }
 
