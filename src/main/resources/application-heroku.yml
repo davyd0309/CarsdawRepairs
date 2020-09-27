@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+info:
+  app:
+    name: CarsdawRepairs
+    description: Service with all repairs
+    version: 0.0.1-SNAPSHOT
+
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+
+
+

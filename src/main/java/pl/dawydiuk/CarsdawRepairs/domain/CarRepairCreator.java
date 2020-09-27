@@ -6,8 +6,10 @@ class CarRepairCreator {
 
     CarRepair from(CarRepairDto carRepairDto) {
         return CarRepair.builder()
+                .id(carRepairDto.getId())
+                .description(carRepairDto.getDescription())
                 .car(carRepairDto.getCar())
-                .name(carRepairDto.getName())
+                .price(carRepairDto.getPrice())
                 .build();
     }
 

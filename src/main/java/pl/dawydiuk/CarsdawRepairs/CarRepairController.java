@@ -1,11 +1,18 @@
 package pl.dawydiuk.CarsdawRepairs;
 
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import lombok.extern.slf4j.Slf4j;
 import pl.dawydiuk.CarsdawRepairs.domain.CarRepairFacade;
 import pl.dawydiuk.CarsdawRepairs.dto.CarRepairDto;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/repairs")
@@ -19,11 +26,8 @@ public class CarRepairController {
     }
 
     @GetMapping
-    public String getAllCarRepairs() {
-        log.info("Send RQ for all repairs");
-        return "{" +
-                "MY ALL REPAIRS - HELLO" +
-                "}";
+    public List<CarRepairDto> getAllCarRepairs() {
+            return carRepairFacade.getAllCarRepairs();
     }
 
     public CarRepairDto addRepair(CarRepairDto carRepairDto) {
@@ -34,4 +38,10 @@ public class CarRepairController {
         return carRepairFacade.getCarRepairById(carRepairId);
     }
 
+    @GetMapping
+    @RequestMapping("/test")
+    public ResponseEntity testQ() {
+        log.info("Send RQ for test");
+        return new ResponseEntity<>("Hello KONRAD Test CarsdawRepairs !", HttpStatus.OK);
+    }
 }

@@ -1,16 +1,15 @@
 package pl.dawydiuk.CarsdawRepairs.domain;
 
-import lombok.Builder;
-import lombok.Getter;
-import pl.dawydiuk.CarsdawRepairs.dto.CarRepairDto;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.math.BigDecimal;
+
+import lombok.Builder;
+import pl.dawydiuk.CarsdawRepairs.dto.CarRepairDto;
 
 @Entity
 @Builder
-@Getter
 class CarRepair {
 
     @Id
@@ -19,13 +18,16 @@ class CarRepair {
 
     private String car;
 
-    private String name;
+    private String description;
 
+    private BigDecimal price;
 
     CarRepairDto dto() {
         return CarRepairDto.builder()
+                .id(id)
                 .car(car)
-                .name(name)
+                .description(description)
+                .price(price)
                 .build();
     }
 }
