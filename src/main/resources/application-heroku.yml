@@ -10,6 +10,16 @@ info:
 spring:
   liquibase:
     change-log: classpath:db/changelog/changelog-master.xml
+  datasource:
+    url: jdbc:postgresql://ec2-54-217-236-206.eu-west-1.compute.amazonaws.com:5432/dooug4g7vssuk
+    username: wysbavpzjdwdig
+    password: a9971bf6be2dfbb92535b51839dd098898b8a67ddcc97a82693da327658ea1d4
+    driverClassName: org.postgresql.Driver
+    maxActive: 10
+    maxIdle: 5
+    minIdle: 2
+    initialSize: 5
+    removeAbandoned: true
 
 
 
