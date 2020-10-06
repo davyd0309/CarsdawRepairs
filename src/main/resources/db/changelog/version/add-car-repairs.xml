@@ -5,14 +5,14 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
     <changeSet author="Konrad" id="2">
         <insert schemaName="public"
-                tableName="car_repairs">
+                tableName="cars_repairs">
             <column name="car" value="Opel Astra" type="varchar(255)"/>
             <column name="description" value="Serwis klimatyzacji" type="varchar(255)"/>
             <column name="price" value="250" type="NUMERIC"/>
         </insert>
 
         <insert schemaName="public"
-                tableName="car_repairs">
+                tableName="cars_repairs">
             <column name="car" value="Volvo V50" type="varchar(255)"/>
             <column name="description" value="Remont silnika" type="varchar(255)"/>
             <column name="price" value="3500" type="NUMERIC"/>

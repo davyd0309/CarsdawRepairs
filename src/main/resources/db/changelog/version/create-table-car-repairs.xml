@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <changeSet author="Konrad" id="1">
-        <createTable tableName="car_repairs">
+        <createTable tableName="cars_repairs">
             <column autoIncrement="true" name="id" type="INT">
                 <constraints primaryKey="true"/>
             </column>
@@ -20,7 +20,7 @@
             </column>
         </createTable>
         <rollback>
-            <dropTable tableName="car_repairs"/>
+            <dropTable tableName="cars_repairs"/>
         </rollback>
     </changeSet>
 </databaseChangeLog>
