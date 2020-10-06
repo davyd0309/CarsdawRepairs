@@ -6,11 +6,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 import pl.dawydiuk.CarsdawRepairs.dto.CarRepairDto;
 
 @Entity
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "cars_repairs")
 class CarRepair {
 
