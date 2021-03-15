@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import pl.dawydiuk.CarsdawRepairs.dto.CarRepairDto;
 
@@ -15,6 +16,7 @@ import pl.dawydiuk.CarsdawRepairs.dto.CarRepairDto;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @Table(name = "cars_repairs")
 class CarRepair {
 

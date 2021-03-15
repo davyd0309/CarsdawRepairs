@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id "org.liquibase.gradle" version "2.0.4"
     id 'java'
+    id 'groovy'
 }
 
 group = 'pl.dawydiuk'
@@ -21,6 +22,10 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'org.postgresql:postgresql'
     compile 'org.liquibase:liquibase-core:3.10.1'
+    testCompile 'org.spockframework:spock-core:2.0-M4-groovy-3.0'
+    testCompile 'org.spockframework:spock-spring:2.0-M4-groovy-3.0'
+    compile 'org.codehaus.groovy:groovy:3.0.7'
+
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
